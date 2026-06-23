@@ -5,10 +5,10 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-64px)] px-4 py-12">
       <div className="text-center max-w-2xl">
-        <h1 className="text-6xl font-bold mb-4">📚 Welcome to The Library</h1>
+        <h1 className="text-6xl font-bold mb-4">📚 Welcome to The Free Library</h1>
         
         <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-          Search from books in OpenLibrary and create your personal reading list
+          Search among books in OpenLibrary and create your personal reading list
         </p>
 
         <div className="mb-12">
