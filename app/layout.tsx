@@ -3,8 +3,8 @@ import { Navigation } from "./components/Navigation";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "The Library - Your Personal Reading List",
-  description: "Search books from OpenLibrary and create your personal reading list",
+  title: "The Free Library - Your Personal Reading List",
+  description: "Search among books from OpenLibrary and create your personal reading list",
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="sv">
+    <html lang="en">
       <body className="bg-white dark:bg-black text-gray-900 dark:text-gray-100">
         <Navigation />
         <main className="min-h-screen">
