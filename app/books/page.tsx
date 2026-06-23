@@ -11,7 +11,7 @@ async function BooksList({ query }: { query: string }) {
     return (
       <div className="text-center py-12">
         <p className="text-gray-600 dark:text-gray-400 text-lg">
-          Börja med att söka efter böcker ovan
+          Start by searching for books in the field above
         </p>
       </div>
     );
@@ -27,7 +27,7 @@ async function BooksList({ query }: { query: string }) {
       return (
         <div className="text-center py-12">
           <p className="text-gray-600 dark:text-gray-400 text-lg">
-            Inga böcker hittades för "{query}". Försök med ett annat sökord.
+            No books found for "{query}". Try a different search term.
           </p>
         </div>
       );
@@ -52,8 +52,8 @@ async function BooksList({ query }: { query: string }) {
     console.error('Error in BooksList:', error);
     return (
       <ErrorState
-        title="Kunde inte hämta böcker"
-        message="Ett fel inträffade när vi försökte hämta böcker från OpenLibrary. Försök igen senare."
+        title="Could not fetch books"
+        message="An error occurred while trying to fetch books from OpenLibrary. Please try again later."
       />
     );
   }
@@ -70,19 +70,19 @@ export default async function BooksPage({ searchParams }: PageProps) {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-12">
-        <h1 className="text-4xl font-bold mb-6">Sök böcker</h1>
+        <h1 className="text-4xl font-bold mb-6">Search Books</h1>
         <SearchForm initialQuery={decodedQuery} />
       </div>
 
       {decodedQuery && (
         <div className="mb-6 p-3 bg-blue-50 dark:bg-blue-900 rounded-lg">
           <p className="text-gray-700 dark:text-gray-300">
-            Visar resultat för: <strong>"{decodedQuery}"</strong>
+            Showing results for: <strong>"{decodedQuery}"</strong>
           </p>
         </div>
       )}
 
-      <Suspense fallback={<LoadingState message="Söker böcker..." />}>
+      <Suspense fallback={<LoadingState message="Searching for books..." />}>
         <BooksList query={decodedQuery} />
       </Suspense>
     </div>
