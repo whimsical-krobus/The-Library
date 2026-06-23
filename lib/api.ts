@@ -52,7 +52,7 @@ export async function searchBooks(query: string, limit: number = 10): Promise<Bo
     }));
   } catch (error) {
     console.error('Error searching books:', error);
-    throw new Error('Kunde inte hämta böcker från OpenLibrary. Försök igen senare.');
+    throw new Error('Could not fetch books from OpenLibrary. Please try again later.');
   }
 }
 
