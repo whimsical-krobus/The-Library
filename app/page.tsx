@@ -11,7 +11,7 @@ export default function Home() {
           Search among books in OpenLibrary and create your personal reading list
         </p>
 
-        <div className="mb-12">
+        <div className="mb-12 flex justify-center">
           <SearchForm />
         </div>
 
