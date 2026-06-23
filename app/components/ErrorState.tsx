@@ -4,8 +4,8 @@ interface ErrorStateProps {
 }
 
 export function ErrorState({
-  message = 'Ett fel inträffade. Försök igen senare.',
-  title = 'Något gick fel',
+  message = 'An error occurred. Please try again later.',
+  title = 'Something went wrong',
 }: ErrorStateProps) {
   return (
     <div className="flex flex-col items-center justify-center min-h-[400px] px-4">
