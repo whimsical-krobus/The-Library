@@ -36,14 +36,17 @@ async function ReadingListContent() {
       );
     }
 
+    // Convert MongoDB documents to plain objects
+    const plainBooks = JSON.parse(JSON.stringify(books));
+
     return (
       <div className="space-y-4">
         <p className="text-gray-600 dark:text-gray-400 mb-6">
-          You have <strong>{books.length}</strong> books in your reading list
+          You have <strong>{plainBooks.length}</strong> books in your reading list
         </p>
 
         <div className="grid gap-4">
-          {books.map((book: any) => (
+          {plainBooks.map((book: any) => (
             <ReadingListItem key={book._id} book={book} />
           ))}
         </div>
