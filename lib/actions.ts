@@ -8,7 +8,6 @@ export async function addToReadingList(book: BookData) {
   try {
     await connectDB();
 
-    // Kontrollera om boken redan finns
     const existing = await ReadingListBook.findOne({ olId: book.olId });
     if (existing) {
       return {
