@@ -6,7 +6,7 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="font-bold text-xl text-blue-600 dark:text-blue-400">
-            📚 Biblioteket
+            📚 The Free Library
           </Link>
 
           <div className="flex gap-6">
@@ -14,13 +14,13 @@ export function Navigation() {
               href="/books"
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
             >
-              Sök böcker
+              Search for books
             </Link>
             <Link
               href="/reading-list"
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
             >
-              Min läslista
+              Reading List
             </Link>
           </div>
         </div>
