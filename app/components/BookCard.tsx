@@ -31,13 +31,12 @@ export function BookCard({ book, isInReadingList = false, onAddSuccess }: BookCa
 
       setMessage(result.message);
 
-      // Clear message efter 3 sekunder
       setTimeout(() => {
         setMessage('');
       }, 3000);
     } catch (error) {
       setMessageType('error');
-      setMessage('Ett fel inträffade. Försök igen.');
+      setMessage('An error occurred. Please try again later.');
     } finally {
       setIsAdding(false);
     }
@@ -57,7 +56,7 @@ export function BookCard({ book, isInReadingList = false, onAddSuccess }: BookCa
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center">
-            <span className="text-gray-400 dark:text-gray-500">Ingen omslagsbild</span>
+            <span className="text-gray-400 dark:text-gray-500">No cover image available</span>
           </div>
         )}
       </div>
@@ -95,7 +94,7 @@ export function BookCard({ book, isInReadingList = false, onAddSuccess }: BookCa
               : 'bg-green-600 hover:bg-green-700 disabled:bg-gray-400'
           }`}
         >
-          {isAdding ? 'Lägger till...' : isInReadingList ? 'I läslistan' : 'Lägg till i läslista'}
+          {isAdding ? 'Adding book...' : isInReadingList ? 'In reading list' : 'Add to reading list'}
         </button>
       </div>
     </div>
