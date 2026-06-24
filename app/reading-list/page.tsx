@@ -36,7 +36,6 @@ async function ReadingListContent() {
       );
     }
 
-    // Convert MongoDB documents to plain objects
     const plainBooks = JSON.parse(JSON.stringify(books));
 
     return (
